@@ -19,7 +19,7 @@ class Service:
         self.cost = cost
 
     def __str__(self):
-        return f"{self.name:<20} ₹{self.cost:.2f}"
+        return f"{self.name:<20} ${self.cost:.2f}"
 
 
 # ----------------------------
@@ -47,7 +47,7 @@ class Bill:
         for service in self.services:
             report.append(str(service))
         report.append("----------------------------------------")
-        report.append(f"{'TOTAL':<20} ₹{self.total_cost:.2f}")
+        report.append(f"{'TOTAL':<20} ${self.total_cost:.2f}")
         report.append("----------------------------------------")
         return "\n".join(report)
 

@@ -79,7 +79,7 @@ def main():
 
     selected_services = []
     for service in service_list:
-        if st.checkbox(f"{service.name} (₹{service.cost:.2f})"):
+        if st.checkbox(f"{service.name} (${service.cost:.2f})"):
             selected_services.append(service)
 
     # --- Generate Bill Button ---
